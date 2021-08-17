@@ -22,11 +22,12 @@ function ColorFactoryApp() {
           <ColorForm addColor={addColor} />
         </Route>
         <Route exact path="/colors/:color">
-          <ColorPage />
+          <ColorPage colors={colors}/>
         </Route>
         <Route exact path="/colors">
           <ColorFactoryHome colors={colors} />
         </Route>
+        <Redirect to="/colors" />
       </Switch>
     </BrowserRouter>
   );

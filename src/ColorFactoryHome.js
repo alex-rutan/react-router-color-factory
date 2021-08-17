@@ -11,11 +11,15 @@ function ColorFactoryHome({ colors }) {
         <Link to="/colors/new">Add a color</Link>
       </div>
       <div className="colorList">
-        {colors.map(c => (
-          <Link to={`/colors/${c}`}>
-            c
-          </Link>
+        <ul>
+          {colors.map(c => (
+          <li>
+            <Link to={`/colors/${c.colorName}`}>
+            {c.colorName}
+            </Link>
+          </li>
         ))}
+        </ul>
       </div>
     </div>
   );

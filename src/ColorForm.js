@@ -23,6 +23,7 @@ function ColorForm({ addColor }) {
     evt.preventDefault();
     history.push("/colors");
     addColor({"colorName": formData.colorName, "colorCode": formData.colorCode});
+    
   }
 
   return (
